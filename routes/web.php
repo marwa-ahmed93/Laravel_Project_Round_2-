@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\DriverController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\MechanicController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProvisionServer;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckRole;
@@ -89,3 +92,14 @@ Route::get('/car/delete/{id}',[CarController::class,'delete'])->name('car.delete
 
 
 
+Route::get('/show/{id}' , [EmployeeController::class  ,'show']);
+Route::get('/index' , [EmployeeController::class  ,'index']);
+
+Route::get('/mechanic/show/{id}',[MechanicController::class , 'show']);
+
+
+
+
+
+Route::get('/post/{id}/add-image', [PostController::class, 'addImage']);
+Route::get('/user/{id}/add-image', [UserController::class, 'addImage']);

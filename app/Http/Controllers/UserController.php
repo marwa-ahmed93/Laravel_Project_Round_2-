@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -33,5 +34,25 @@ public function store(Request $request){
  
     return redirect('/user');
 } 
+
+
+
+
+
+
+
+  public function addImage($id)
+    {
+        $post = User::find($id);
+   if($post){
+  $post->image()->create([
+            'url' => 'post1.jpg'
+        ]);
+  }
+      
+
+        return "Image added";
+    }
+
 
 }
