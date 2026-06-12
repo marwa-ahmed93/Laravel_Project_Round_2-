@@ -92,7 +92,7 @@ Route::get('/car/delete/{id}',[CarController::class,'delete'])->name('car.delete
 
 
 
-Route::get('/show/{id}' , [EmployeeController::class  ,'show']);
+Route::get('/employee/show/{id}' , [EmployeeController::class  ,'show']);
 Route::get('/index' , [EmployeeController::class  ,'index']);
 
 Route::get('/mechanic/show/{id}',[MechanicController::class , 'show']);
